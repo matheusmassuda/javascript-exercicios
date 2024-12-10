@@ -26,7 +26,7 @@ if (eUmTriangulo == true) {
     console.log(`Os lados ${primeiroLado}, ${segundoLado} e ${terceiroLado}, não podem formar um triângulo.`);
 }
 
-function qualTipoTriangulo() {
+function acharTipoTriangulo() {
     if (
         primeiroLado == segundoLado &&
         segundoLado == terceiroLado
@@ -37,7 +37,7 @@ function qualTipoTriangulo() {
     }
 }
 
-let tipoTriangulo = qualTipoTriangulo(primeiroLado, segundoLado, terceiroLado);
+let tipoTriangulo = acharlTipoTriangulo(primeiroLado, segundoLado, terceiroLado);
 
 if (tipoTriangulo == 'equilatero') {
     console.log('O triângulo é equilátero.');
