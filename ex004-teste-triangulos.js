@@ -37,7 +37,7 @@ function acharTipoTriangulo() {
     }
 }
 
-let tipoTriangulo = acharlTipoTriangulo(primeiroLado, segundoLado, terceiroLado);
+let tipoTriangulo = acharTipoTriangulo(primeiroLado, segundoLado, terceiroLado);
 
 if (tipoTriangulo == 'equilatero') {
     console.log('O triângulo é equilátero.');
