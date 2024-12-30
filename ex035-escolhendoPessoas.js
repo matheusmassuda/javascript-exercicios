@@ -1,11 +1,11 @@
-const readlineSync = require('readline-sync');
+const input = require('readline-sync');
 
 // Função para obter informações sobre uma pessoa
 function obterInformacoesPessoa(genero) {
-  const nome = readlineSync.question(`Digite o nome do ${genero}: `);
-  const idade = parseInt(readlineSync.questionInt(`Digite a idade de ${nome}: `), 10);
-  const corPele = readlineSync.question('Escolha a cor da pele (Preto, Castanho, Loiro, Ruivo): ').toLowerCase();
-  const corCabelo = readlineSync.question('Escolha a cor do cabelo (Castanho, Loiro, Preto, Ruivo): ').toLowerCase();
+  const nome = input.question(`Digite o nome do ${genero}: `);
+  const idade = parseInt(input.questionInt(`Digite a idade de ${nome}: `), 10);
+  const corPele = input.question('Escolha a cor da pele (Preto, Castanho, Loiro, Ruivo): ').toLowerCase();
+  const corCabelo = input.question('Escolha a cor do cabelo (Castanho, Loiro, Preto, Ruivo): ').toLowerCase();
 
   return { nome, idade, corPele, corCabelo };
 }
@@ -28,7 +28,7 @@ function main() {
   let continuar = true;
 
   while (continuar) {
-    const genero = readlineSync.question('Você quer cadastrar um Homem ou Mulher? (Digite "Homem" ou "Mulher", ou "sair" para encerrar): ').toLowerCase();
+    const genero = input.question('Você quer cadastrar um Homem ou Mulher? (Digite "Homem" ou "Mulher", ou "sair" para encerrar): ').toLowerCase();
 
     if (genero === 'sair') {
       continuar = false;
@@ -53,3 +53,5 @@ function main() {
 }
 
 main();
+
+//node ex035-escolhendoPessoas.js
